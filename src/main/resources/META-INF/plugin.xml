@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.rohanvashisht.bend.language</id>
+    <name>Bend Syntax Highlighting</name>
+    <depends>com.intellij.modules.platform</depends>
+
+    <description>
+        <![CDATA[
+      Bend Syntax Highlighting.
+      Adds syntax highlighting support for Bend (.bend).
+      <br>
+    ]]>
+    </description>
+    <change-notes>
+        <![CDATA[
+      <ul>
+        <li><b>0.1.0</b> Bend Syntax Highlighting.</li>
+      </ul>
+    ]]>
+    </change-notes>
+
+    <vendor url="https://rohanvashisht.com">Rohan Vashisht</vendor>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType name="Bend" implementationClass="com.rohanvashisht.bend.language.BendFileType"
+                  fieldName="INSTANCE"
+                  language="BendLanguage" extensions="bend"/>
+
+        <lang.parserDefinition
+                language="BendLanguage"
+                implementationClass="com.rohanvashisht.bend.language.BendParserDefinition"/>
+
+        <lang.syntaxHighlighterFactory
+                language="BendLanguage"
+                implementationClass="com.rohanvashisht.bend.language.BendSyntaxHighlighterFactory"/>
+
+    </extensions>
+
+</idea-plugin>
