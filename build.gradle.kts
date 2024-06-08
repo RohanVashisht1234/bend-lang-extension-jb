@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "org.intellij.sdk"
-version = "2.0.1"
+version = "2.0.2"
 
 repositories {
     mavenCentral()
@@ -29,7 +29,7 @@ java {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version.set("2021.2.4")
+    version.set("2024.1.2")
     plugins.set(listOf("com.intellij.java"))
 }
 
@@ -41,7 +41,7 @@ tasks {
     patchPluginXml {
         version.set("${project.version}")
         sinceBuild.set("212")
-        untilBuild.set("221.*")
+        untilBuild.set("242.14146.16")
     }
 
     test {
