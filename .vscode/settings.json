@@ -1,4 +1,11 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "interactive"
-}
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always"
+    },
+    "[java]": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "always"
+      }
+    }
+  }
+  

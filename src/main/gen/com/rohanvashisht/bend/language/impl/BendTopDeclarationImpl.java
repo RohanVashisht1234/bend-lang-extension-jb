@@ -1,7 +1,7 @@
 // This is a generated file. Not intended for manual editing.
 package com.rohanvashisht.bend.language.impl;
 
-import com.rohanvashisht.bend.language.psi.*;
+
 import org.jetbrains.annotations.*;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElementVisitor;

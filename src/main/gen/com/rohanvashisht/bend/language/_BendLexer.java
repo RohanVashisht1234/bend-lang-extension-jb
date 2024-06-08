@@ -15,7 +15,6 @@ public class _BendLexer implements FlexLexer {
   public static final int YYEOF = -1;
 
   /** initial size of the lookahead buffer */
-  private static final int ZZ_BUFFERSIZE = 16384;
 
   /** lexical states */
   public static final int YYINITIAL = 0;
@@ -711,9 +710,6 @@ public class _BendLexer implements FlexLexer {
     return j;
   }
 
-  /** the input device */
-  private java.io.Reader zzReader;
-
   /** the current state of the DFA */
   private int zzState;
 
@@ -737,16 +733,8 @@ public class _BendLexer implements FlexLexer {
       from input */
   private int zzEndRead;
 
-  /**
-   * zzAtBOL == true <=> the scanner is currently at the beginning of a line
-   */
-  private boolean zzAtBOL = true;
-
   /** zzAtEOF == true <=> the scanner is at the EOF */
   private boolean zzAtEOF;
-
-  /** denotes if the user-EOF-code has already been executed */
-  private boolean zzEOFDone;
 
   /** Number of newlines encountered up to the start of the matched text. */
   @SuppressWarnings("unused")
@@ -774,9 +762,6 @@ public class _BendLexer implements FlexLexer {
     private int commentStart;
     private int commentDepth;
 
-    private int optionsGhcStart;
-    private int optionsGhcDepth;
-
     private int haddockStart;
     private int haddockDepth;
 
@@ -790,19 +775,8 @@ public class _BendLexer implements FlexLexer {
    * @param   in  the java.io.Reader to read input from.
    */
   public _BendLexer(java.io.Reader in) {
-    this.zzReader = in;
   }
 
-
-  /** Returns the maximum size of the scanner buffer, which limits the size of tokens. */
-  private int zzMaxBufferLen() {
-    return Integer.MAX_VALUE;
-  }
-
-  /**  Whether the scanner buffer can grow to accommodate a larger token. */
-  private boolean zzCanGrow() {
-    return true;
-  }
 
   /**
    * Translates raw input code points to DFA table row
@@ -824,7 +798,6 @@ public class _BendLexer implements FlexLexer {
     zzBuffer = buffer;
     zzCurrentPos = zzMarkedPos = zzStartRead = start;
     zzAtEOF  = false;
-    zzAtBOL = true;
     zzEndRead = end;
     yybegin(initialState);
   }

@@ -3,7 +3,6 @@ package com.rohanvashisht.bend.language.psi;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.parser.GeneratedParserUtilBase;
 import com.intellij.psi.TokenType;
-import com.rohanvashisht.bend.language.psi.BendTypes;
 
 public class BendParserUtil extends GeneratedParserUtilBase {
 

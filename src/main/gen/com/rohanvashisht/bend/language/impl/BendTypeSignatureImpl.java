@@ -3,7 +3,7 @@ package com.rohanvashisht.bend.language.impl;
 
 import java.util.List;
 
-import com.rohanvashisht.bend.language.psi.*;
+
 import org.jetbrains.annotations.*;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElementVisitor;
